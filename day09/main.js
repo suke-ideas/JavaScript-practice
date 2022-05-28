@@ -286,3 +286,12 @@ let task12=countries.findIndex((i)=>{
 })
 console.log(task12)
 
+// Level 2
+console.log('Level 2')
+// 1
+console.log('Tìm tổng giá của sản phẩm bằng nhiều cách')
+
+// Level 3
+console.log('Level 3')
+
+

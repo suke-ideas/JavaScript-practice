@@ -60,3 +60,65 @@ countries = [
 
 // Level 1
 
+
+const countries1 = ['Finland', 'Sweden', 'Norway']
+
+// 1
+let task1=new Set()
+console.log(task1)
+
+// 2
+for (let i=0;i<=10;i++)
+{
+  task1.add(i)
+}
+console.log(task1)
+
+// 3
+task1.delete(5)
+console.log(task1)
+
+// 4
+task1.clear()
+console.log(task1)
+
+// 5
+let s1=['Bui','Thi','Thanh','Ngân','Hihi','hehe','haha']
+let task2=new Set(s1)
+console.log(task2)
+
+task2.clear()
+for (let i=0;i<5;i++)
+{
+  task2.add(s1[i])
+}
+console.log(task2)
+
+// 6
+let task3=new Map()
+console.log(task3)
+for (let i of countries1)
+{
+  task3.set(i,i.length)
+}
+console.log(task3)
+
+// Level 2
+console.log('Level 2')
+// 1
+const a = [4, 5, 8, 9,1,3,5]
+const b = [3, 4, 5, 7]
+let c=[...a,...b]
+let B =new Set(b)
+let A=new Set(a)
+let task4=new Set(c)
+console.log(task4)
+
+// 2
+let task5=a.filter((i)=>{
+  return ! B.has(i)
+})
+console.log(task5)
+
+// Level 3
+
