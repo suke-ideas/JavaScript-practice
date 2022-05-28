@@ -305,3 +305,10 @@ let sum4=function(arg)
     console.log(sum)
 }
 sum4(22)
+
+// 13
+console.log(13)
+let sum5=function(n)
+{
+    
+}
