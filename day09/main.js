@@ -158,3 +158,131 @@ console.log(numbers6) //[100, 37, 9.81, 3.14]
 // 9. sort()    
 
 // level 1
+console.log('Level 1')
+const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand']
+const names7 = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+const numbers7 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const products7 = [
+  { product: 'banana', price: 3 },
+  { product: 'mango', price: 6 },
+  { product: 'potato', price: ' ' },
+  { product: 'avocado', price: 8 },
+  { product: 'coffee', price: 10 },
+  { product: 'tea', price: '' },
+]
+
+countries.forEach((i => {
+  console.log(i)
+}))
+
+names7.forEach((i) => {
+  console.log(i)
+})
+
+numbers7.forEach((i) => {
+  console.log(i)
+})
+
+// 6
+let countries1=countries.map((i) =>{
+  return i.toUpperCase()
+})
+
+console.log(countries1)
+
+// 7
+let countries2=countries.map((i) => {
+  return i.length
+})
+
+console.log(countries2)
+
+// 8
+let num8=numbers7.map((i) => {
+  return i**2
+})
+console.log(num8)
+
+// 10
+let price1=products7.map((i) =>{
+  return i.price
+})
+
+console.log(price1)
+
+// 11
+let task1=countries.filter((i) => {
+  return i.includes('land')
+})
+
+console.log(task1)
+// 12
+let task2=countries.filter((i) => {
+  return i.length==6
+})
+
+console.log(task2)
+
+// 13
+let task3=countries.filter((i) => {
+  return i.length>=6
+})
+console.log(task3)
+
+// 14
+let task4=countries.filter((i) => {
+  return i.startsWith('N')
+})
+
+console.log(task4)
+
+// 15
+let task5=products7.filter((i) => {
+  return i.price>0
+})
+
+console.log(task5)
+
+// 16
+let task6=numbers7.reduce((sum,i) =>{
+  return sum+i
+},0)
+console.log(task6)
+
+// 20
+let task7=names7.some((i) =>{
+  return i.length>7
+})
+console.log(task7)
+console.log(names7)
+
+// 21
+let task8=countries.every((i) =>{
+  return i.includes('land')
+})
+console.log(task8)
+
+// 23
+let task9=countries.find((i)=>{
+  return i.length==6
+})
+console.log(task9)
+
+// 24
+let task10=countries.findIndex((i)=>{
+  return i.length==6
+})
+console.log(task10)
+
+// 25
+let task11=countries.findIndex((i) => {
+  return i=='Norway'
+})
+console.log(task11)
+
+// 26
+let task12=countries.findIndex((i)=>{
+  return i=='Russia'
+})
+console.log(task12)
+
