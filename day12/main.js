@@ -157,43 +157,6 @@ console.log('Level 2')
 
 paragraph = `I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.`
 
-// Viết hàm đếm tần suất của các từ
-// let obj=[]
-
-// let tenMost= (s)=>{
-//     let arr3=s.split(' ')
-//     console.log(arr3)
-//     for (let i of arr3)
-//     {
-//         if (obj.length==0)
-//         {
-//             let newObj={
-//                 word: `${i}`,
-//                 count: 1
-//             }
-//             obj.push(newObj)
-//         }
-//         for (let j of obj)
-//         {
-//             if (j.word==`${i}`)
-//         {
-//             j.count++;
-//         }
-//         else
-//         {
-//             let newObj={
-//                 word: `${i}`,
-//                 count: 1
-//             }
-//             obj.push(newObj)
-//         }
-//         }     
-//     }
-// }
-// tenMost(paragraph)
-// console.log(obj)
-
-
 // Level 3
 console.log('Level 3')
 // 1
@@ -209,3 +172,83 @@ let vd2={
 vd2.age++;
 vd1.push(vd2)
 console.log(vd1)
+
+console.clear()
+let text22='Tui là Bùi Thị  Thanh Ngân, hi, tui sinh ngày 22/05/2003\
+hôm nay tui text vì lí do chạy chương trình kiểm thử hoi huhu :<\
+abc xyz     %&&I% ^%&^^( %#%$&'
+console.log(text22.match(/\b /g))
+
+
+// Viết hàm đếm tần suất của các từ
+
+const message = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`
+
+function cleanText(string) {
+    return string.replace(/[.%&$@;,!?]/gi, '');
+  }
+  
+  function countWords(string) {
+    let wordCounts = {};
+    let words = string.split(/[\b +]/);
+  
+    for (let i = 0; i < words.length; i++)
+      wordCounts['_' + words[i]] = (wordCounts['_' + words[i]] || 0) + 1;
+  
+    return wordCounts;
+  }
+  
+  
+  
+
+console.clear()
+
+paragraph = `I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.`
+let words=paragraph.split(/[\b ]/)
+for (let a of words)
+{
+   for (let i=0;i<a.length;i++)
+   {
+
+   }
+}
+console.log(words)
+let count22=[]
+for (let word22 of words)
+{
+    if (word22 == words[0])
+    {
+        let newW={word:`${word22}`,count:1}
+        count22.push(newW)
+    }
+    else
+    {
+        let co=false
+       for (let i of count22)
+       {
+           if (i.word==word22)
+           {
+               i.count++
+               co=true
+               break
+           }
+       }
+       if (!co)
+       {
+        let newW={word:`${word22}`,count:1}
+        count22.push(newW)
+       }
+    }
+}
+console.log(count22)
+let tesst=countWords(paragraph)
+console.log(tesst)
+
+console.clear()
+
+let cleaned = cleanText(paragraph);
+  let count = countWords(cleaned)
+  
+  console.log(cleaned);
+  console.log(count);
+console.log(paragraph)
